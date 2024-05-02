@@ -64,7 +64,7 @@ if [ ! -f $INIT_LOCK ] || [ "$INIT_ON_RESTART" = "true" ]; then
   fi
 
   echo "* Applying PS_DOMAIN ($PS_DOMAIN) to the dump..."
-  sed -i "s~localhost:80~$PS_DOMAIN~g" /dump.sql
+  sed -ci "s~localhost:80~$PS_DOMAIN~g" /dump.sql
   export PS_DOMAIN="$PS_DOMAIN"
 
   [ "$SSL_REDIRECT" = "true" ] && PS_PROTOCOL="https";
