@@ -23,7 +23,7 @@ curl -s -L -H "Content-Type: application/octet-stream" \
   "https://packages.sury.org/php/apt.gpg"
 apt-get update
 apt-get install --no-install-recommends -qqy ca-certificates
-apt-get install --no-install-recommends -o Dpkg::Options::="--force-confold" -qqy bash less vim git sudo mariadb-client \
+apt-get install --no-install-recommends -o Dpkg::Options::="--force-confold" -qqy bash less vim git sudo mariadb-client mariadb-connector-c-dev \
   tzdata zip unzip curl wget make jq netcat-traditional build-essential \
   lsb-release libgnutls30 gnupg libiconv-hook1 libonig-dev nginx libnginx-mod-http-headers-more-filter libnginx-mod-http-geoip \
   libnginx-mod-http-geoip libnginx-mod-stream openssh-client;
